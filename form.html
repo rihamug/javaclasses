@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <br>
+    <label>Name</label><br>
+    <input type="text" id="name"><br>
+    <br>
+    <label>Username</label><br>
+    <br>
+    <input type="text" id="username"><br>
+    <br>
+    <label>Password</label><br>
+    <br>
+    <input type="password" id="password">
+    <br>
+    <button onclick="addDetails()">Sign Up</button>
+    <br>
+    <br>
+    <hr>
+
+    <h1>Log In</h1>
+    <!-- <label>Name</label><br>
+    <br>
+    <input type="text" id="loginName"><br>
+    <br> -->
+    <label>Username</label><br>
+    <br>
+    <input type="text" id="loginUserName"><br>
+    <br>
+    <label>Password</label><br>
+    <br>
+    <input type="password" id="loginPassword"><br>
+    <br>
+    <button onclick="validate()">Log In</button>
+
+
+    <script type="text/javascript">
+        // Creating an array and objects for users
+        let users = []
+        // let user = {
+        //         name:document.getElementById("name").value,
+        //         username:document.getElementById("username").value,
+        //         password:document.getElementById("password").value,
+        // }
+        let user2 = {
+            name: "Ryan David",
+            username: "ryandiv",
+            password: "rYan@2022uganda",
+
+        }
+
+        let user3 = {
+            name: "Zeid Issa",
+            username: "zedi2020",
+            password: "zeid@2020",
+        }
+        // Pushing objects to the array
+        users.push(user2)
+        users.push(user3)
+        // Adding user details to the array
+        function addDetails() {
+            let user = {
+                name: document.getElementById("name").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+
+            }
+            users.push(user)
+            console.log(users)
+        }
+
+        // Veryfying the details in the array with the ones in the input     
+        function validate() {
+            // let loginName = document.getElementById("loginName").value;
+            let loginUserName = document.getElementById("loginUserName").value;
+            let loginPassword = document.getElementById("loginPassword").value;
+
+            // for (let index = 0; index < users.length; index++) {
+            //     if (loginName == users[index].name && loginUserName == users[index].username && loginPassword == users[index].password) {
+            //         alert("Login Verified");
+            //         break;
+            //     }
+            //     for (let index = 0; index < users.length; index++) {
+            //         if (loginName != users[index].name || loginUserName != users[index].username || loginPassword != users[index].password) {
+            //             alert("Login Failed")
+
+            //         }
+            //         break;
+            //     }
+
+
+
+           // Find function 
+            let validUser = users.find(function(user){
+                if (user.username == loginUserName && user.password == loginPassword){
+                    return true
+                } else{
+                    return false
+                }
+            })
+            if (validUser) {
+                alert("Welcome Back "+validUser.name)
+            } else{
+                alert("Incorrect user")
+            }
+            
+
+// Making sure content has been entered
+
+            if (loginUserName.length == 0) {
+                alert("Insert Name")
+            } else if (loginPassword.length == 0) {
+                alert("Insert Password")
+            } else if (loginUserName.length > 0 || loginPassword.length > 0) {
+                // alert("Login successful")
+            }
+
+
+        }
+
+
+        //assignement
+        // name username password
+        //signup successful
+        //print out details
+
+        //login form
+        // pick user object from a list of user
+        // check if details match object users
+        // if they do, login successful
+    </script>
+
+</body>
+
+</html>

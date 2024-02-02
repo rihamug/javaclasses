@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Functions</h1>
+    <script>
+      let car = {
+        name:"Audi",
+        type:"Sedan",
+        year:"2000",
+        color: "Blue",
+        make: "Range Rover"
+      }
+    
+      function getCarDetails() {
+        return car.name + car.type + car.year
+      }
+
+      function calculate(number1, number2) {
+        return number1 + " " + number2
+      }
+
+      function add(number1, number2) {
+        return number1 + number2
+      }
+
+      function multiply(number1, number2) {
+        return number1 * number2
+      }
+
+      let print = multiply(2,3)
+
+      print = add(20,20)
+
+      function pimpMyRide(color, tyres, engine = "2.0", lights, stikers = "Bumber stickers") {
+        return `
+            Color: ${color}
+            Tyres: ${tyres}
+            Engine: ${engine}
+            Lights: ${lights}
+            Skikers: ${stikers}
+        `
+      }
+
+      print = pimpMyRide("Blue", "20 inch", "", "blue neon")
+
+      function parkMyCar(car, rate, dayOrNight = "Night") {
+        return `
+            Car details: 
+                Name: ${car.name}
+                Color: ${car.color}
+                Make: ${car.make}
+
+            Parking Rate: ${rate}
+
+            Parking time: ${ dayOrNight }
+        `
+      }
+
+      print = parkMyCar(car, 20000)
+
+      console.log(print)
+
+
+
+    </script>
+</body>
+</html>

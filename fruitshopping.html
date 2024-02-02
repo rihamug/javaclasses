@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Basket</title>
+    <style>
+        button {
+            background-color: lightgreen;
+            padding: 10px 10px 10px 10px;
+            border: 2px black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit Shopping</h1>
+    <br>
+    <label><h2>Select Fruit</h2></label>
+    <br>
+    <select id="fruitType">
+        <option value="Mango" id="mango"> Mango</option>
+        <option value="Banana" id="banana">Banana</option>
+        <option value="Apple" id="apple">Apple</option>
+        <option value="PawPaw" id="pawpaw">PawPaw</option>
+        <option value="Watermelon" id="watermelon">Watermelon</option>
+    </select>
+    <br>
+    <br>
+    <label><h2>Select Color</h2></label>
+    <br>
+
+    <select id="fruitColor">
+        <option value="Yellow" id="Yellow">Yellow</option>
+        <option value="Red" id="red">Red</option>
+        <option value="Green" id="green">Green</option>
+     </select>
+    <br>
+    <br>
+    <label><h2>Select Size</h2></label>
+    <br>
+    <select id="fruitSize">
+        <option value="Small" id="small">Small</option>
+        <option value="Medium" id="medium">Medium</option>
+        <option value="Large" id="large">Large</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="addFruit()">Select</button>
+    <hr>
+    <h2>Fruit List</h2>
+    <ol id="fruit-list">
+
+    </ol>
+    <script>
+    let fruitType = document.getElementById("fruitType")
+    let fruitColor = document.getElementById("fruitColor")
+    let fruitSize = document.getElementById("fruitSize")
+    let fruitListDispaly = document.getElementById("fruit-list")
+    let fruits = []
+    // Adding Fruits to a list
+    function addFruit() {
+        let newFruit = {
+            name:fruitType.value,
+            color:fruitColor.value,
+            size:fruitSize.value,
+        }
+    fruits.push(newFruit)
+    console.log(fruits) 
+    fruitListDispaly.innerHTML = "" 
+    display()
+    
+    }
+
+    //Displaying List
+    function display() {
+        for(const fruit of fruits){
+            appendItem(fruitListDispaly, fruit)
+        }
+    }
+    //Adding items to a list
+    function appendItem(fruitListDispaly, fruit) {
+        let singleFruitDisplay = document.createElement("li")
+        singleFruitDisplay.innerHTML = `
+        <span>${fruit.name}</span>
+        <span>${fruit.color}</span>
+        <span>${fruit.size}</span>
+        `
+        fruitListDispaly.appendChild(singleFruitDisplay)
+    }
+
+    
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Accounts</title>
+    <link rel="stylesheet" href="userstyles.css">
+</head>
+<body>
+    <h1>User Acounts</h1>
+
+    <h3>Account Registration</h3>
+    <div>
+        <div>
+            <label>Name</label><br>
+            <input type="text" id="name" placeholder="Name">
+            <br>
+        </div>
+        <div>
+            <label>Email</label><br>
+            <input type="email" id="email" placeholder="Email">
+            <br>
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input type="password" id="password" placeholder="Password">
+            <br>
+        </div>
+        <div>
+            <button id="register" onclick="register()">Register</button>
+        </div>
+     </div>
+     <hr>
+     <h3>Users List</h3>
+     <ol id="users-list">
+        
+     </ol>
+     <br>
+     <hr>
+    <h1>Log In</h1>
+     <div>
+        <label>Email</label><br>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <br>
+    </div>
+    <div>
+        <label>Password</label><br>
+        <input type="text" id="loginPassword" placeholder="Password">
+        <br>
+    </div>
+    <div>
+        <button onclick="validate()">Log In</button>
+    </div>
+    <hr>
+    <div class="fruits-div" id="fruits-div">
+        <h1>Fruit Basket</h1>
+        <div>
+            <input type="text" placeholder="Enter Fruit" id="fruitInput" autofocus>
+            <button onclick="addFruit()">Add to Basket</button>
+        </div>
+        <hr>
+        <div>
+            <h4>Fruit List</h4>
+            <ol id="fruits-added">
+
+            </ol>
+        </div>
+    </div>
+     <script src="useraccounts.js"></script>
+
+</body>
+</html>

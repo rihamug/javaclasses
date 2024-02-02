@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Fruit Shopping</h1>
+
+    <input type="text" placeholder="Enter Fruit" id="fruitInput" autofocus>
+    <button onclick="addFruit()">Add to Basket</button>
+    <br>
+    <button onclick="sortItems()">Sort</button>
+
+    <br>
+    <hr>
+    <h2>Basket</h2>
+    <span id="fruitAdded"></span>
+    <script>
+        let fruitInput = document.getElementById("fruitInput");
+        let fruitAdded = document.getElementById("fruitAdded");
+
+        let fruits = [];
+        
+        function addFruit() {
+            fruits.push(fruitInput.value)
+            fruitAdded.innerHTML = fruits
+            fruitInput.value = null
+        }
+
+        function sortItems() {
+            fruits.sort()
+            fruitAdded.innerHTML = fruits
+        }
+    </script>
+</body>
+</html>

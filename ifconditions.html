@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello If Conditions</h1>
+
+    <input type="number" id="number">
+    <button onclick="verify()">Verify</button>
+   <script>
+    let a = 12
+    let b = "Wow "
+    let c = false
+    let d = 5
+
+    // "==" is used for equaling to something
+    // "===" is used to for seeing if both the value and the type are equal
+
+
+    if (a === 10 && c === false ) {
+        
+    }
+
+    if (a === 10 || c ===  false) {
+        console.log("Both or one of the other are equal to their values") 
+    }
+
+    if (5 < a < 10) {
+        console.log("a is equal to the function")
+    } else{
+        console.log("Is not equal to the function")
+    }
+
+    let number = document.getElementById("number");
+
+    function verify() {
+        if (number.value >= 15 && number.value <= 20) {
+            console.log("Value is between 15 and 20")
+        } else if (number.value < 15) {
+            console.log("Value is less than 15")
+        } else if (number.value > 20 ) {
+            console.log("Value is greater than 20")
+        }
+    }
+
+    // Ternary operators
+    const Ryan = d<3? true : false;
+    console.log(Ryan)
+
+    // switch (a) {
+    //     case (12):
+    //     console.log("Is equal to")  
+    //         break;
+    //     case (5):
+    //         console.log("Is greater than")
+    //     default:
+            
+    //         break;
+    // }
+
+    // if (a<5) {
+    //     console.log("Less than 5")
+    // }else if (a <= 5) {
+    //     console.log("Is less than or equal to 5")
+    // } else if (a == 5){
+    //     console.log("Is equal to 5")
+    // }else{
+    //     console.log("Greater than 5")
+    // }
+
+    // if (b == "") {
+    //     console.log(" It's empty")
+    // } else if(b.length > 5){
+    //     console.log("Text is greater than 5 values")
+    // } else if (b.length < 5) {
+    //     console.log("Text is less than 5 values")
+    // } else if(b.length ==  5){
+    //     console.log("Text is equal to 5")
+    // }
+
+    // if (c == true) {
+    //    console.log("C is true")
+ 
+    // }else{
+    //     console.log("C is false")
+    // }
+
+    // if (b == "Wow") {
+    //     console.log("B is the string")
+    // } else{
+    //     console.log("B is not the string")
+    // }
+    
+
+    // if (a === 10) {
+    //     console.log("Is equal to 10")
+    // }
+
+    // if (a === "10") {
+    //     console.log("Is equivalent to 10")
+    // }
+    
+    
+
+    
+
+</script> 
+</body>
+</html>
